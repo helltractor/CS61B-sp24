@@ -23,7 +23,7 @@ public class TestBSTMap {
     public void sanityClearTest() {
         BSTMap<String, Integer> b = new BSTMap<>();
         for (int i = 0; i < 455; i++) {
-            b.put("hi" + i, 1+i);
+            b.put("hi" + i, 1 + i);
             //make sure put is working via containsKey and get
             assertThat(b.get("hi" + i)).isEqualTo(1 + i);
             assertThat(b.containsKey("hi" + i)).isTrue();
