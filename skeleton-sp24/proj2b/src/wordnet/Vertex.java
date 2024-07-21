@@ -1,4 +1,4 @@
-package graph;
+package wordnet;
 
 import java.util.HashMap;
 import java.util.Map;

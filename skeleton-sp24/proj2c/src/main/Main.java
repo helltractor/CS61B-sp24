@@ -1,7 +1,10 @@
 package main;
 
 import browser.NgordnetServer;
-import graph.WordNetGraph;
+import handler.HistoryHandler;
+import handler.HistoryTextHandler;
+import handler.HyponymsHandler;
+import wordnet.WordNet;
 import ngrams.NGramMap;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +23,7 @@ public class Main {
         String hyponymFile = "./data/wordnet/hyponyms.txt";
         
         NGramMap ngm = new NGramMap(wordFile, countFile);
-        WordNetGraph wng = new WordNetGraph(synsetFile, hyponymFile);
+        WordNet wng = new WordNet(synsetFile, hyponymFile);
         
         hns.startUp();
         hns.register("history", new HistoryHandler(ngm));

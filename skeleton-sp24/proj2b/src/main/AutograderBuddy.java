@@ -1,7 +1,8 @@
 package main;
 
 import browser.NgordnetQueryHandler;
-import graph.WordNetGraph;
+import handler.HyponymsHandler;
+import wordnet.WordNet;
 
 
 public class AutograderBuddy {
@@ -9,7 +10,7 @@ public class AutograderBuddy {
     public static NgordnetQueryHandler getHyponymsHandler(
             String wordFile, String countFile,
             String synsetFile, String hyponymFile) {
-        WordNetGraph wng = new WordNetGraph(synsetFile, hyponymFile);
+        WordNet wng = new WordNet(synsetFile, hyponymFile);
         return new HyponymsHandler(wng);
     }
 }

@@ -85,4 +85,4 @@ public class TimeSeriesTest {
             assertThat(totalPopulation.data().get(i)).isWithin(1E-10).of(expectedTotal.get(i));
         }
     }
-} 
+}

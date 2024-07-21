@@ -1,7 +1,7 @@
 import browser.NgordnetQuery;
 import browser.NgordnetQueryHandler;
 import browser.NgordnetQueryType;
-import main.AutograderBuddy;
+import main.AutoGradeBuddy;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public class TestCommonAncestors {
      * You should add more tests for the other spec examples! */
     @Test
     public void testSpecAdjustment() {
-        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+        NgordnetQueryHandler studentHandler = AutoGradeBuddy.getHyponymsHandler(
                 WORDS_FILE, TOTAL_COUNTS_FILE, SMALL_SYNSET_FILE, SMALL_HYPONYM_FILE);
         List<String> words = List.of("adjustment");
 
@@ -33,7 +33,7 @@ public class TestCommonAncestors {
     
     @Test
     public void testOne() {
-        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+        NgordnetQueryHandler studentHandler = AutoGradeBuddy.getHyponymsHandler(
                 WORDS_FILE, TOTAL_COUNTS_FILE, SMALL_SYNSET_FILE, SMALL_HYPONYM_FILE);
         List<String> words = List.of("change", "adjustment");
         
@@ -45,7 +45,7 @@ public class TestCommonAncestors {
     
     @Test
     public void testTwo() {
-        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+        NgordnetQueryHandler studentHandler = AutoGradeBuddy.getHyponymsHandler(
                 LARGE_WORDS_FILE, TOTAL_COUNTS_FILE, LARGE_SYNSET_FILE, LARGE_HYPONYM_FILE);
         List<String> words = List.of("adjustment");
         
@@ -57,7 +57,7 @@ public class TestCommonAncestors {
     
     @Test
     public void testThree() {
-        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+        NgordnetQueryHandler studentHandler = AutoGradeBuddy.getHyponymsHandler(
                 LARGE_WORDS_FILE, TOTAL_COUNTS_FILE, LARGE_SYNSET_FILE, LARGE_HYPONYM_FILE);
         List<String> words = List.of("change", "adjustment");
         
@@ -69,7 +69,7 @@ public class TestCommonAncestors {
     
     @Test
     public void testFour() {
-        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+        NgordnetQueryHandler studentHandler = AutoGradeBuddy.getHyponymsHandler(
                 LARGE_WORDS_FILE, TOTAL_COUNTS_FILE, LARGE_SYNSET_FILE, LARGE_HYPONYM_FILE);
         List<String> words = List.of("change", "adjustment", "modification");
         
@@ -81,7 +81,7 @@ public class TestCommonAncestors {
     
     @Test
     public void testFive() {
-        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+        NgordnetQueryHandler studentHandler = AutoGradeBuddy.getHyponymsHandler(
                 LARGE_WORDS_FILE, TOTAL_COUNTS_FILE, LARGE_SYNSET_FILE, LARGE_HYPONYM_FILE);
         List<String> words = List.of("change", "adjustment", "modification", "event");
         

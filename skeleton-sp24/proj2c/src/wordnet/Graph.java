@@ -1,11 +1,12 @@
-package graph;
+package wordnet;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 class Graph {
-    private Map<String, Vertex> vertices;
+    
+    private final Map<String, Vertex> vertices;
     
     public Graph() {
         this.vertices = new HashMap<>();
@@ -62,7 +63,7 @@ class Graph {
         return v1.getWeight(v2);
     }
     
-    public Map<Vertex, Integer> getNeighbors(String id) {
+    public Map61B<Vertex, Integer> getNeighbors(String id) {
         Vertex vertex = vertices.get(id);
         
         if (vertex == null) {

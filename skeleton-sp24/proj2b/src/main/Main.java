@@ -1,7 +1,10 @@
 package main;
 
 import browser.NgordnetServer;
-import graph.WordNetGraph;
+import handler.DummyHistoryHandler;
+import handler.DummyHistoryTextHandler;
+import handler.HyponymsHandler;
+import wordnet.WordNet;
 import org.slf4j.LoggerFactory;
 
 public class Main {
@@ -14,7 +17,7 @@ public class Main {
         String synsetFile = "./data/wordnet/synsets.txt";
         String hyponymFile = "./data/wordnet/hyponyms.txt";
         
-        WordNetGraph wng = new WordNetGraph(synsetFile, hyponymFile);
+        WordNet wng = new WordNet(synsetFile, hyponymFile);
         
         hns.startUp();
         hns.register("history", new DummyHistoryHandler());

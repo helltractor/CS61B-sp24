@@ -1,17 +1,16 @@
-package graph;
+package wordnet;
 
 import edu.princeton.cs.algs4.In;
 
 import java.util.*;
 
-public class WordNetGraph extends Graph{
+public class WordNet extends Graph{
     
     private Map<String, List<String>> synsetToIdList = new HashMap<>();
     private Map<String, List<String>> idToSynsetList = new HashMap<>();
     private Map<String, String> synsetDescription = new HashMap<>();
-    private Boolean isAncestor;
     
-    public WordNetGraph(String synsetFilename, String hyponymFilename) {
+    public WordNet(String synsetFilename, String hyponymFilename) {
         super();
         // Read in the synset file
         In synsetIn = new In(synsetFilename);
@@ -38,10 +37,9 @@ public class WordNetGraph extends Graph{
             String fromId = parts[0];
             addVertexIfAbsent(fromId);
             for (int i = 1; i < parts.length; i++) {
+                addVertexIfAbsent(parts[i]);
                 String toId = parts[i];
-                addVertexIfAbsent(toId);
                 addEdge(fromId, toId, i);
-                addEdge(toId, fromId, -i);
             }
         }
     }
@@ -51,9 +49,7 @@ public class WordNetGraph extends Graph{
             this.addVertex(id);
         }
     }
-    
-    public Set<String> getNeighbors(String syn, boolean isAncestor) {
-        this.isAncestor = isAncestor;
+    public Set<String> getHyponyms(String syn) {
         List<String> idList = synsetToIdList.get(syn);
         Set<String> result = new TreeSet<>();
         if (idList == null) {
@@ -61,59 +57,50 @@ public class WordNetGraph extends Graph{
         }
         for (String id : idList) {
             List<String> synsets = idToSynsetList.get(id);
-            if (synsets != null) {
-                result.addAll(synsets);
+            for (String synset : synsets) {
+                result.add(synset);
             }
             Map<Vertex, Integer> hyponyms = getNeighbors(id);
             for (Vertex v : hyponyms.keySet()) {
-                List<String> neighborSynsets = idToSynsetList.get(v.getId());
-                if (neighborSynsets != null) {
-                    result.addAll(neighborSynsets);
-                }
+                result.addAll(idToSynsetList.get(v.getId()));
             }
         }
         return result;
     }
     
-    public Set<String> getAdjacentNeighbors(List<String> synsets, boolean isAncestor) {
-        this.isAncestor = isAncestor;
+    public Set<String> getAdjacentHyponyms(List<String> synsets) {
         Set<String> result = new TreeSet<>();
-        boolean firstSet = true;
+        boolean flag = true;
         for (String synset : synsets) {
-            Set<String> neighbors = getNeighbors(synset, isAncestor);
-            if (firstSet) {
-                result.addAll(neighbors);
-                firstSet = false;
+            Set<String> hyponyms = getHyponyms(synset);
+            if (flag && result.isEmpty()) {
+                result.addAll(hyponyms);
+                flag = false;
             } else {
-                result.retainAll(neighbors);
+                result.retainAll(hyponyms);
             }
         }
         return result;
     }
-
+    
     @Override
     public Map<Vertex, Integer> getNeighbors(String id) {
         Vertex v = getVertex(id);
         if (v == null) {
             throw new IllegalArgumentException("Vertex not found.");
         }
-        Map<Vertex, Integer> neighbors = new HashMap<>();
+        Map<Vertex, Integer> hyponyms = new HashMap<>();
         Deque<Vertex> deque = new ArrayDeque<>();
-        Set<Vertex> visited = new HashSet<>();
         deque.addLast(v);
         while (!deque.isEmpty()) {
             Vertex current = deque.removeFirst();
             for (Vertex neighbor : current.getNeighbors().keySet()) {
-                if (!visited.contains(neighbor)) {
-                    if ((isAncestor && current.getWeight(neighbor) < 0) ||
-                            (!isAncestor && current.getWeight(neighbor) > 0)) {
-                        deque.addLast(neighbor);
-                        neighbors.put(neighbor, current.getWeight(neighbor));
-                    }
-                    visited.add(neighbor);
+                if (!hyponyms.containsKey(neighbor)) {
+                    deque.addLast(neighbor);
+                    hyponyms.put(neighbor, current.getWeight(neighbor));
                 }
             }
         }
-        return neighbors;
+        return hyponyms;
     }
 }

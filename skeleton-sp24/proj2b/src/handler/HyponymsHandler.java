@@ -1,17 +1,18 @@
-package main;
+package handler;
 
 import browser.NgordnetQuery;
 import browser.NgordnetQueryHandler;
-import graph.WordNetGraph;
+import wordnet.WordNet;
 
 import java.util.List;
 import java.util.Set;
+import java.util.StringJoiner;
 
 public class HyponymsHandler extends NgordnetQueryHandler {
     
-    private WordNetGraph wng;
+    private WordNet wng;
     
-    public HyponymsHandler(WordNetGraph wng) {
+    public HyponymsHandler(WordNet wng) {
         this.wng = wng;
     }
     
@@ -19,15 +20,12 @@ public class HyponymsHandler extends NgordnetQueryHandler {
     public String handle(NgordnetQuery q) {
         List<String> words = q.words();
         StringBuilder result = new StringBuilder();
+        StringJoiner joiner = new StringJoiner(", ");
         Set<String> togetherHyponyms = wng.getAdjacentHyponyms(words);
         result.append("[");
         for (String hyponym : togetherHyponyms) {
-            result.append(hyponym).append(", ");
+            joiner.add(hyponym);
         }
-        if (result.length() > 1) {
-            result.delete(result.length() - 2, result.length());
-        }
-        result.append("]");
-        return result.toString();
+       return result.append(joiner).append("]").toString();
     }
 }

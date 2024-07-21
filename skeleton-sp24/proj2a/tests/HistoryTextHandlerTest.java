@@ -1,6 +1,6 @@
 
 import browser.NgordnetQuery;
-import main.HistoryTextHandler;
+import handler.HistoryTextHandler;
 import ngrams.NGramMap;
 
 import org.junit.jupiter.api.Test;

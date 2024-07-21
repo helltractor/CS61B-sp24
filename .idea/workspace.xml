@@ -4,15 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d6950cf-0322-4227-acf2-7f12fdec4f81" name="更改" comment="Updating lab04">
-      <change afterPath="$PROJECT_DIR$/skeleton-sp24/proj1a/src/LinkedListDeque61B.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skeleton-sp24/proj1b/src/ArrayDeque61B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="4d6950cf-0322-4227-acf2-7f12fdec4f81" name="更改" comment="Updating proj1a-proj2c">
+      <change afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/wordnet/BST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/wordnet/BSTMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/wordnet/Map61B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/main/DummyHistoryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/handler/DummyHistoryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/main/DummyHistoryTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/handler/DummyHistoryTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/main/FileReadDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/demo/FileReadDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/main/HistoryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/handler/HistoryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/main/HistoryTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/handler/HistoryTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/main/PlotDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/demo/PlotDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2a/tests/HistoryTextHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2a/tests/HistoryTextHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2a/tests/TimeSeriesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2a/tests/TimeSeriesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/wordnet/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/graph/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/wordnet/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/graph/WordNetGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/wordnet/WordNet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/main/AutograderBuddy.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/main/AutograderBuddy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/main/DummyHistoryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/handler/DummyHistoryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/main/DummyHistoryTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/handler/DummyHistoryTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/main/FileReadDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/demo/FileReadDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/main/HyponymsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/handler/HyponymsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/wordnet/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/graph/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/wordnet/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/graph/WordNetGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/wordnet/WordNet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/AutograderBuddy.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/AutoGradeBuddy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/DummyHistoryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/handler/DummyHistoryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/DummyHistoryTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/handler/DummyHistoryTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/FileReadDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2b/src/demo/FileReadDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/HistoryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/handler/HistoryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/HistoryTextHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2a/src/handler/HistoryTextHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/HyponymsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/handler/HyponymsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/main/PlotDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/src/demo/PlotDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/tests/TestCommonAncestors.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/tests/TestCommonAncestors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/tests/TestMultiWordKNot0Hypoyms.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/tests/TestMultiWordKNot0Hypoyms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-sp24/proj2c/tests/TestOneWordKNot0Hyponyms.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/proj2c/tests/TestOneWordKNot0Hyponyms.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,11 +82,13 @@
     "JUnit.DogTest (1).executor": "Run",
     "JUnit.DogTest.executor": "Run",
     "JUnit.DogTest.testDog.executor": "Run",
+    "JUnit.TestMultiWordK0Hyponyms.executor": "Run",
+    "JUnit.TestOneWordK0Hyponyms.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/CS61B-sp24/skeleton-sp24/proj1a",
+    "last_opened_file_path": "D:/Java/CS61B-sp24/skeleton-sp24/proj2c",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +103,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\CS61B-sp24\skeleton-sp24\proj2c\src\wordnet" />
       <recent name="D:\Java\CS61B-sp24" />
       <recent name="D:\Java\CS61B\skeleton-sp24" />
       <recent name="D:\Java\CS61B\CS61B" />
@@ -73,6 +114,35 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="cs61B" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="wordnet" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestMultiWordK0Hyponyms">
+    <configuration name="TestMultiWordK0Hyponyms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proj2b" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestMultiWordK0Hyponyms" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOneWordK0Hyponyms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proj2b" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestOneWordK0Hyponyms" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestMultiWordK0Hyponyms" />
+        <item itemvalue="JUnit.TestOneWordK0Hyponyms" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -100,6 +170,7 @@
       <workItem from="1721316107807" duration="1346000" />
       <workItem from="1721374748279" duration="426000" />
       <workItem from="1721396696626" duration="1939000" />
+      <workItem from="1721565575970" duration="1061000" />
     </task>
     <task id="LOCAL-00001" summary="Upload skeleton-sp24 and library-sp24, finish hw0b">
       <option name="closed" value="true" />
@@ -133,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721374814675</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updating proj1a-proj2c">
+      <option name="closed" value="true" />
+      <created>1721565618426</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721565618426</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +238,7 @@
     <MESSAGE value="Updating hw0b (finish 75 percent)" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Updating lab04" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating lab04" />
+    <MESSAGE value="Updating proj1a-proj2c" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating proj1a-proj2c" />
   </component>
 </project>

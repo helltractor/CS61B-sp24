@@ -1,7 +1,7 @@
 import browser.NgordnetQuery;
 import browser.NgordnetQueryHandler;
 import browser.NgordnetQueryType;
-import main.AutograderBuddy;
+import main.AutoGradeBuddy;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public class TestOneWordKNot0Hyponyms {
 
     @Test
     public void testActKNot0() {
-        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+        NgordnetQueryHandler studentHandler = AutoGradeBuddy.getHyponymsHandler(
                 WORDS_FILE, TOTAL_COUNTS_FILE, SMALL_SYNSET_FILE, SMALL_HYPONYM_FILE);
         List<String> words = List.of("CS61A");
 

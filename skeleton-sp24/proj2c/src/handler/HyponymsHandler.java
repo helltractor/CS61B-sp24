@@ -1,8 +1,8 @@
-package main;
+package handler;
 
 import browser.NgordnetQuery;
 import browser.NgordnetQueryHandler;
-import graph.WordNetGraph;
+import wordnet.WordNet;
 import ngrams.NGramMap;
 import ngrams.TimeSeries;
 
@@ -11,9 +11,9 @@ import java.util.*;
 public class HyponymsHandler extends NgordnetQueryHandler {
     
     private NGramMap ngm;
-    private WordNetGraph wng;
+    private WordNet wng;
     
-    public HyponymsHandler(NGramMap ngm, WordNetGraph wng) {
+    public HyponymsHandler(NGramMap ngm, WordNet wng) {
         this.ngm = ngm;
         this.wng = wng;
     }

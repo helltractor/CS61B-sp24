@@ -2,6 +2,8 @@ package main;
 
 import static utils.Utils.*;
 
+import handler.HistoryHandler;
+import handler.HistoryTextHandler;
 import ngrams.NGramMap;
 import org.slf4j.LoggerFactory;
 
