@@ -11,6 +11,7 @@ import static com.google.common.truth.Truth.assertThat;
 public class TestOneWordKNot0Hyponyms {
     public static final String WORDS_FILE = "data/ngrams/frequency-EECS.csv";
     public static final String TOTAL_COUNTS_FILE = "data/ngrams/total_counts.csv";
+    
     public static final String SMALL_SYNSET_FILE = "data/wordnet/synsets-EECS.txt";
     public static final String SMALL_HYPONYM_FILE = "data/wordnet/hyponyms-EECS.txt";
 

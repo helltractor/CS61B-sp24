@@ -1,6 +1,3 @@
-package deque;
-
-import java.util.Iterator;
 import java.util.List;
 
 public class ArrayDeque61B<T> implements Deque61B<T> {
@@ -125,54 +122,5 @@ public class ArrayDeque61B<T> implements Deque61B<T> {
     @Override
     public T getRecursive(int index) {
         throw new UnsupportedOperationException("No need to implement getRecursive for proj 1b");
-    }
-    
-    @Override
-    public Iterator<T> iterator() {
-        return new ArrayDeque61BIterator();
-    }
-    
-    private class ArrayDeque61BIterator implements Iterator<T> {
-        private int index;
-        
-        public ArrayDeque61BIterator() {
-            index = 0;
-        }
-        
-        @Override
-        public boolean hasNext() {
-            return index < currentCapacity;
-        }
-        
-        @Override
-        public T next() {
-            T result = items[Math.floorMod(sentinel + index, capacity)];
-            index++;
-            return result;
-        }
-    }
-    
-    @Override
-    public boolean equals(Object o) {
-        if (o instanceof ArrayDeque61B<?> other) {
-            if (currentCapacity != other.currentCapacity
-                    || capacity != other.capacity
-                    || sentinel != other.sentinel) {
-                return false;
-            }
-            for (int i = 0; i < currentCapacity; i++) {
-                if (!items[Math.floorMod(sentinel + i, capacity)]
-                        .equals(other.items[Math.floorMod(other.sentinel + i, capacity)])) {
-                    return false;
-                }
-            }
-            return true;
-        }
-        return false;
-    }
-    
-    @Override
-    public String toString() {
-        return toList().toString();
     }
 }

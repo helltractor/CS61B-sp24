@@ -101,4 +101,9 @@ public class TimeSeries extends TreeMap<Integer, Double> {
         }
         return quotient;
     }
+    
+    public Double sum() {
+        List<Double> data = this.data();
+        return data.stream().mapToDouble(Double::doubleValue).sum();
+    }
 }

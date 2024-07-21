@@ -4,7 +4,6 @@ import java.util.Comparator;
 import deque.MaxArrayDeque61B;
 
 import static com.google.common.truth.Truth.assertThat;
-import static com.google.common.truth.Truth.assertWithMessage;
 
 public class MaxArrayDeque61BTest {
     private static class StringLengthComparator implements Comparator<String> {
@@ -19,6 +18,10 @@ public class MaxArrayDeque61BTest {
         mad.addFirst("");
         mad.addFirst("2");
         mad.addFirst("fury road");
+        for (String s : mad) {
+            System.out.println(s);
+        }
         assertThat(mad.max()).isEqualTo("fury road");
+        assertThat(mad.min()).isEqualTo("");
     }
 }

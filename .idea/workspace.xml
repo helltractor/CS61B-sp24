@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d6950cf-0322-4227-acf2-7f12fdec4f81" name="更改" comment="Updating lab04">
-      <change beforePath="$PROJECT_DIR$/skeleton-sp24/lab05/src/UnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-sp24/lab05/src/UnionFind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skeleton-sp24/proj1a/src/LinkedListDeque61B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skeleton-sp24/proj1b/src/ArrayDeque61B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/CS61B-sp24/skeleton-sp24/lab05",
+    "last_opened_file_path": "D:/Java/CS61B-sp24/skeleton-sp24/proj1a",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,6 +99,7 @@
       <workItem from="1721315697815" duration="399000" />
       <workItem from="1721316107807" duration="1346000" />
       <workItem from="1721374748279" duration="426000" />
+      <workItem from="1721396696626" duration="1939000" />
     </task>
     <task id="LOCAL-00001" summary="Upload skeleton-sp24 and library-sp24, finish hw0b">
       <option name="closed" value="true" />

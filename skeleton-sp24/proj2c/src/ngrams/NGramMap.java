@@ -18,7 +18,7 @@ import java.util.TreeMap;
  */
 public class NGramMap {
     
-    public static final int MIN_YEAR = 1400;
+    public static final int MIN_YEAR = 1900;
     public static final int MAX_YEAR = 2100;
     
     private Map<String, TimeSeries> wordCountHistory = new TreeMap<>();
@@ -42,7 +42,12 @@ public class NGramMap {
         
         while (!countsIn.isEmpty()) {
             String nextLine = countsIn.readLine();
-            String[] splitLine = nextLine.split(",");
+            String[] splitLine;
+            if (nextLine.contains(",")) {
+                splitLine = nextLine.split(",");
+            } else {
+                splitLine = nextLine.split("\t");
+            }
             int year = Integer.valueOf(splitLine[0]);
             double totalCount = Double.valueOf(splitLine[1]);
             totalCountHistory.put(year, totalCountHistory.getOrDefault(year, 0.0) + totalCount);

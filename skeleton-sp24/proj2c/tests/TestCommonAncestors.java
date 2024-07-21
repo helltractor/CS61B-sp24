@@ -30,8 +30,64 @@ public class TestCommonAncestors {
         String expected = "[adjustment, alteration, event, happening, modification, natural_event, occurrence, occurrent]";
         assertThat(actual).isEqualTo(expected);
     }
-
-    // TODO: Add more unit tests (including edge case tests) here.
-
-    // TODO: Create similar unit test files for the k != 0 cases.
+    
+    @Test
+    public void testOne() {
+        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+                WORDS_FILE, TOTAL_COUNTS_FILE, SMALL_SYNSET_FILE, SMALL_HYPONYM_FILE);
+        List<String> words = List.of("change", "adjustment");
+        
+        NgordnetQuery nq = new NgordnetQuery(words, 2000, 2020, 0, NgordnetQueryType.ANCESTORS);
+        String actual = studentHandler.handle(nq);
+        String expected = "[alteration, event, happening, modification, natural_event, occurrence, occurrent]";
+        assertThat(actual).isEqualTo(expected);
+    }
+    
+    @Test
+    public void testTwo() {
+        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+                LARGE_WORDS_FILE, TOTAL_COUNTS_FILE, LARGE_SYNSET_FILE, LARGE_HYPONYM_FILE);
+        List<String> words = List.of("adjustment");
+        
+        NgordnetQuery nq = new NgordnetQuery(words, 2000, 2020, 0, NgordnetQueryType.ANCESTORS);
+        String actual = studentHandler.handle(nq);
+        String expected = "[abstract_entity, abstraction, accommodation, act, action, activity, adaptation, adaption, adjustment, advance, allowance, alteration, betterment, biological_process, calibration, change, cost, deed, entity, event, expenditure, fitting, happening, human_action, human_activity, improvement, modification, natural_event, occurrence, occurrent, organic_process, outgo, outlay, payment, physical_entity, physical_process, possession, process, psychological_feature, readjustment, recompense, registration, relation, shift, spending, standardisation, standardization, transferred_possession, transferred_property, transformation, transmutation]";
+        assertThat(actual).isEqualTo(expected);
+    }
+    
+    @Test
+    public void testThree() {
+        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+                LARGE_WORDS_FILE, TOTAL_COUNTS_FILE, LARGE_SYNSET_FILE, LARGE_HYPONYM_FILE);
+        List<String> words = List.of("change", "adjustment");
+        
+        NgordnetQuery nq = new NgordnetQuery(words, 2000, 2020, 0, NgordnetQueryType.ANCESTORS);
+        String actual = studentHandler.handle(nq);
+        String expected = "[abstract_entity, abstraction, act, action, alteration, change, deed, entity, event, happening, human_action, human_activity, modification, natural_event, occurrence, occurrent, physical_entity, physical_process, process, psychological_feature, relation]";
+        assertThat(actual).isEqualTo(expected);
+    }
+    
+    @Test
+    public void testFour() {
+        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+                LARGE_WORDS_FILE, TOTAL_COUNTS_FILE, LARGE_SYNSET_FILE, LARGE_HYPONYM_FILE);
+        List<String> words = List.of("change", "adjustment", "modification");
+        
+        NgordnetQuery nq = new NgordnetQuery(words, 2000, 2020, 0, NgordnetQueryType.ANCESTORS);
+        String actual = studentHandler.handle(nq);
+        String expected = "[abstract_entity, abstraction, act, action, alteration, change, deed, entity, event, happening, human_action, human_activity, modification, natural_event, occurrence, occurrent, physical_entity, psychological_feature, relation]";
+        assertThat(actual).isEqualTo(expected);
+    }
+    
+    @Test
+    public void testFive() {
+        NgordnetQueryHandler studentHandler = AutograderBuddy.getHyponymsHandler(
+                LARGE_WORDS_FILE, TOTAL_COUNTS_FILE, LARGE_SYNSET_FILE, LARGE_HYPONYM_FILE);
+        List<String> words = List.of("change", "adjustment", "modification", "event");
+        
+        NgordnetQuery nq = new NgordnetQuery(words, 2000, 2020, 10, NgordnetQueryType.ANCESTORS);
+        String actual = studentHandler.handle(nq);
+        String expected = "[abstraction, entity, event]";
+        assertThat(actual).isEqualTo(expected);
+    }
 }
