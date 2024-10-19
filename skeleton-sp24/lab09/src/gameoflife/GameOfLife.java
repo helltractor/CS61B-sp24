@@ -1,5 +1,7 @@
 package gameoflife;
 
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.Out;
 import edu.princeton.cs.algs4.StdDraw;
 import tileengine.TERenderer;
 import tileengine.TETile;
@@ -7,6 +9,8 @@ import tileengine.Tileset;
 import utils.FileUtils;
 
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -236,16 +240,35 @@ public class GameOfLife {
         TETile[][] nextGen = new TETile[width][height];
         // The board is filled with Tileset.NOTHING
         fillWithNothing(nextGen);
-
-        // TODO: Implement this method so that the described transitions occur.
-        // TODO: The current state is represented by TETiles[][] tiles and the next
-        // TODO: state/evolution should be returned in TETile[][] nextGen.
-
-
-
-
-        // TODO: Returns the next evolution in TETile[][] nextGen.
-        return null;
+        
+        // Count the number of neighbors for each cell.
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                int count = 0;
+                for (int x = i - 1; x <= i + 1; x++) {
+                    for (int y = j - 1; y <= j + 1; y++) {
+                        if (x == i && y == j || x < 0 || y < 0 || x >= width || y >= height) {
+                            continue;
+                        }
+                        if (tiles[x % width][y % height] == Tileset.CELL) {
+                            count++;
+                        }
+                    }
+                }
+                if (tiles[i][j] == Tileset.CELL) {
+                    if (count < 2 || count > 3) {
+                        nextGen[i][j] = Tileset.NOTHING;
+                    } else {
+                        nextGen[i][j] = Tileset.CELL;
+                    }
+                } else {
+                    if (count == 3) {
+                        nextGen[i][j] = Tileset.CELL;
+                    }
+                }
+            }
+        }
+        return nextGen;
     }
 
     /**
@@ -266,20 +289,20 @@ public class GameOfLife {
      * 0 represents NOTHING, 1 represents a CELL.
      */
     public void saveBoard() {
-        // TODO: Save the dimensions of the board into the first line of the file.
-        // TODO: The width and height should be separated by a space, and end with "\n".
-
-
-
-        // TODO: Save the current state of the board into save.txt. You should
-        // TODO: use the provided FileUtils functions to help you. Make sure
-        // TODO: the orientation is correct! Each line in the board should
-        // TODO: end with a new line character.
-
-
-
-
-
+        Out out = new Out(SAVE_FILE);
+        out.println(width + " " + height);
+        for (int i = height - 1; i >= 0; i--) {
+            StringBuilder sb = new StringBuilder();
+            for (int j = 0; j < width; j++) {
+                if (currentState[j][i] == Tileset.NOTHING) {
+                    sb.append("0");
+                } else {
+                    sb.append("1");
+                }
+            }
+            out.println(sb.toString());
+        }
+        out.close();
     }
 
     /**
@@ -287,25 +310,26 @@ public class GameOfLife {
      * 0 represents NOTHING, 1 represents a CELL.
      */
     public TETile[][] loadBoard(String filename) {
-        // TODO: Read in the file.
-
-        // TODO: Split the file based on the new line character.
-
-        // TODO: Grab and set the dimensions from the first line.
-
-        // TODO: Create a TETile[][] to load the board from the file into
-        // TODO: and any additional variables that you think might help.
-
-
-        // TODO: Load the state of the board from the given filename. You can
-        // TODO: use the provided builder variable to help you and FileUtils
-        // TODO: functions. Make sure the orientation is correct!
-
-
-
-
-        // TODO: Return the board you loaded. Replace/delete this line.
-        return null;
+        In in = new In(filename);
+        String nextLine = in.readLine();
+        int width = Integer.parseInt(nextLine.split(" ")[0]);
+        int height = Integer.parseInt(nextLine.split(" ")[1]);
+        TETile[][] board = new TETile[width][height];
+        while (!in.isEmpty()) {
+            for (int i = 0; i < width; i++) {
+                String line = in.readLine();
+                for (int j = 0; j < height; j++) {
+                    int tile = Integer.parseInt(line.substring(j, j + 1));
+                    if (tile == 0) {
+                        board[i][j] = Tileset.NOTHING;
+                    } else {
+                        board[i][j] = Tileset.CELL;
+                    }
+                }
+            }
+        }
+        in.close();
+        return board;
     }
 
     /**

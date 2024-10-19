@@ -52,6 +52,8 @@ public class NGramMap {
             double totalCount = Double.valueOf(splitLine[1]);
             totalCountHistory.put(year, totalCountHistory.getOrDefault(year, 0.0) + totalCount);
         }
+        wordsIn.close();
+        countsIn.close();
     }
 
     /**
